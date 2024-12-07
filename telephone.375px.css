@@ -1,4 +1,8 @@
 @media screen and  (max-width:480px){
+    .list{
+        width: 340px;
+        height: 100vh;
+    }
     .test {
         width: 340px;
         flex-wrap: wrap;

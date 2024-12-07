@@ -33,35 +33,40 @@ const list = document.getElementById('list');
       //додаю в список ведені значення
       li.append(checkbox);
       pairList.append(li);
-
  });
 
-  // Сортировка по имени
+  //створюю ф-цію яка при виклику кнопки буде відсортувати по алфавіту
   buttonSortByName.addEventListener('click', () => {
+      //створю const items який зразу приймає новий масив
       const items = Array.from(pairList.querySelectorAll('li'));
+      // відсортувати по алфавіту
       items.sort((a, b) => {
-          const [nameA] = a.innerText.split('=').map((item) => item.trim());
-          const [nameB] = b.innerText.split('=').map((item) => item.trim());
+          const [nameA] = a.innerText.split('=');
+          const [nameB] = b.innerText.split('=');
           return nameA.localeCompare(nameB);
       });
-      items.forEach((item) => pairList.appendChild(item));
+      //перебираю кожний елемент в дів
+       pairList.appendChild(item);
   });
 
-  // Сортировка по значению
+  // створюю ф-цію яка при виклику кнопки буде відсортувати по значенню
   buttonSortByNumber.addEventListener('click', () => {
+      //створю const items який зразу приймає новий масив
       const items = Array.from(pairList.querySelectorAll('li'));
+      //відсортовую від найменшого до більшого
       items.sort((a, b) => {
-          const valueA = parseInt(a.innerText.split('=')[1].trim());
-          const valueB = parseInt(b.innerText.split('=')[1].trim());
+           const valueA = (a.innerText.split('=')[1]);
+           const valueB = (b.innerText.split('=')[1]);
           return valueA - valueB;
       });
-       items.forEach((item) => pairList.appendChild(item));
+      //перебираю кожний елемент в дів
+       pairList.appendChild(item);
   });
 
-  // Удаление выбранных элементов
+  //створюю ф-цію яка при виклику кнопки буде видаляти вибраний елемент
   buttonDelete.addEventListener('click', () => {
       const checkboxes = pairList.querySelectorAll('.delete-checkbox');
-       checkboxes.forEach((checkbox) => {
+       checkboxes.forEach((checkbox) =>{
             if (checkbox.checked) {
             checkbox.parentElement.remove();
             }
