@@ -66,6 +66,7 @@ const list = document.getElementById('list');
   //створюю ф-цію яка при виклику кнопки буде видаляти вибраний елемент
   buttonDelete.addEventListener('click', () => {
       const checkboxes = pairList.querySelectorAll('.delete-checkbox');
+      //виконується тільки для вибраного елемента.
        checkboxes.forEach((checkbox) =>{
             if (checkbox.checked) {
             checkbox.parentElement.remove();
