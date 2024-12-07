@@ -20,15 +20,21 @@
       <h1>Test</h1>
       <h4>Name/Value Pair</h4>
       <input type="text"  id="inputCinema" name="genreFilm"  placeholder="жанр фільм=рік випуска" >
-      <button id="buttonAdd" class="add">Add</button>
+      <button id="buttonAdd" class="buttonAdd">Add</button>
     </form>
+
     <h4>Name/Value Pair List</h4>
-    <div id="pairList" class="listName"  value="number">
-      <ul id="list"></ul>
+    <div class="listNameValue">
+      <div id="pairList" class="listName"  value="number">
+        <ul class=""></ul>
+      </div>
+      <div class="button">
+        <button  id="buttonSortByName"  class="buttonName">Sort by Name</button>
+        <button id="buttonSortByNumber" class="buttonNumber" >Sort by Number</button>
+        <button id ="buttonDelete" class="buttonDelete"  >Delete</button>
+      </div>
+
     </div>
-    <button  id="buttonSortByName"  class="name">Sort by Name</button>
-    <button id="buttonSortByNumber" class="number" >Sort by Number</button>
-    <button id ="buttonDelete" class="delete"  >Delete</button>
   </div>
 </section>
 <script src="sept-js.js"></script>

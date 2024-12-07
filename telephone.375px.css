@@ -1,0 +1,18 @@
+@media screen and  (max-width:480px){
+    .test {
+        width: 340px;
+        flex-wrap: wrap;
+    }
+    .listNameValue {
+        width: 340px;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    .button{
+        width: 340px;
+        margin-left: 25px;
+    }
+    .buttonAdd{
+        margin-left: 25px;
+    }
+}
